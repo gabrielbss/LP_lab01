@@ -16,7 +16,7 @@ OBJS_Q1 = ./build/q1/main.o ./build/q1/area.o ./build/q1/calcula.o ./build/q1/vo
 
 CPPFLAGS = -Wall -pedantic -ansi -std=c++11
 
-.PHONY: doxy clean go questao_1
+.PHONY: doxy clean go questao_1 init
 
 questao_1: $(questao_1)
 
@@ -43,6 +43,12 @@ $(OBJ_DIR)/q1/perimetro.o: $(SRC_DIR)/questao_1/perimetro.cpp $(INC_DIR)/questao
 $(OBJ_DIR):
 	mkdir $@
 
+init:
+	mkdir -p $(BIN_DIR)
+	mkdir -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)/q1
+	mkdir -p $(DOC_DIR)
+
 doxy:
 	$(RM) $(DOC_DIR)/*
 	doxygen Doxyfile
@@ -53,5 +59,5 @@ clean:
 	$(RM) $(OBJ_DIR)/*.o
 
 go: 
-	$(PROG)
+	./bin/geometrica
 

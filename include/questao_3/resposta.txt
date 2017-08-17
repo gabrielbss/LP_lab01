@@ -1,0 +1,7 @@
+Questão 2
+	
+ Após entrarem e sairem da função funcX, arg1 e arg2 tem valor 11 e 23, respectivamente. Os valores não foram alterados pois as variáveis não foram passadas por referência.
+
+ Na linha 28, após a função funcY, elas mantêm os mesmo valores, mesmo que arg1 tenha sido passado por referência, o seu valor não foi alterado dentro da funcY.
+
+ No final do programa, depois de terem passado pela última função, a funcZ, arg1 e arg2 não tiveram seus valores alterados na main, já que não foram passadas por referência para a função.
